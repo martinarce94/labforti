@@ -10,4 +10,4 @@
      fortios_system_global:
         vdom:  "{{ vdom }}"
         system_global:
-            timezone: 87
+            timezone: "{{ time_zone }}"
