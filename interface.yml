@@ -15,5 +15,5 @@
           ip: "{{ net_interface }}"
           interface: "{{ port_number }}"
           alias: "{{ alias_name }}"
-          allowaccess: "{{ item }}"
-        loop: "{{ allow_access }}"
+          allowaccess: "{{ allow_access }}"
+#        loop: "{{ allow_access }}"
