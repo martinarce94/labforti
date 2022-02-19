@@ -14,7 +14,7 @@
         auth_concurrent_override: "enable"
         auth_concurrent_value: "4"
         authtimeout: "5"
-        email_to: "martin@lab.com.py"
+        email_to: "{{ user_email }}"
         id:  "8"
         name: "{{ user_name }}"
         passwd: "{{ user_password }}"
