@@ -1,4 +1,4 @@
-- hosts: fortivm7
+- hosts: all
   connection: httpapi
   collections:
   - fortinet.fortios
@@ -11,10 +11,10 @@
         vdom:  "{{ vdom }}"
         state: "present"
         system_interface:
-          name: port2
-          ip: "192.168.0.144/24"
-          interface: "port2"
-          alias: "TEST_INTERFACE"
+          name: "{{ port_number }}"
+          ip: "{{ net_interface }}"
+          interface: "{{ port_number }}"
+          alias: "{{ alias_name }}"
           allowaccess: 
             - "https"
             - "ping"
