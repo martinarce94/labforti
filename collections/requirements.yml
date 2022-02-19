@@ -1,1 +1,2 @@
-collections: - fortinet.fortios
+collections: 
+  - fortinet.fortios
