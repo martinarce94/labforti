@@ -1,0 +1,23 @@
+- hosts: fortigates
+  collections:
+    - fortinet.fortios
+  connection: httpapi
+  vars:
+   vdom: "root"
+   ssl_verify: "False"
+  tasks:
+  - name: Configure local users.
+    fortios_user_local:
+      vdom:  "{{ vdom }}"
+      state: "present"
+      user_local:
+        auth_concurrent_override: "enable"
+        auth_concurrent_value: "4"
+        authtimeout: "5"
+        email_to: "martin@lab.com.py"
+        id:  "8"
+        name: "martin"
+        passwd: "welcome1"
+        status: "enable"
+        two_factor: "disable"
+        type: "password
