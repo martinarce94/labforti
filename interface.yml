@@ -6,7 +6,7 @@
     vdom: "root"
     ssl_verify: "False"
   tasks:
-   - name: Configure Test Interface Port2 
+   - name: Configure Interface Fortigate
      fortios_system_interface:
         vdom:  "{{ vdom }}"
         state: "present"
@@ -15,7 +15,5 @@
           ip: "{{ net_interface }}"
           interface: "{{ port_number }}"
           alias: "{{ alias_name }}"
-          allowaccess: 
-            - "https"
-            - "ping"
-            - "ssh"
+          allowaccess: "{{ item }}"
+        loop: "{{ allow_access }}"
