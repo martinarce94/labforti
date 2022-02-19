@@ -3,8 +3,8 @@
     - fortinet.fortios
   connection: httpapi
   vars:
-   vdom: "root"
-   ssl_verify: "False"
+    vdom: "root"
+    ssl_verify: "False"
   tasks:
   - name: Configure local users.
     fortios_user_local:
@@ -20,4 +20,4 @@
         passwd: "welcome1"
         status: "enable"
         two_factor: "disable"
-        type: "password
+        type: "password"
