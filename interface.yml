@@ -16,4 +16,3 @@
           interface: "{{ port_number }}"
           alias: "{{ alias_name }}"
           allowaccess: "{{ allow_access }}"
-#        loop: "{{ allow_access }}"
