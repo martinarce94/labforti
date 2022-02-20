@@ -15,4 +15,5 @@
           ip: "{{ net_interface }}"
           interface: "{{ port_number }}"
           alias: "{{ alias_name }}"
+          status: up
           allowaccess: "{{ allow_access }}"
