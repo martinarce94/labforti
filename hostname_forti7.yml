@@ -10,4 +10,4 @@
      fortios_system_global:
         vdom:  "{{ vdom }}"
         system_global:
-            hostname: 'FortiVM7'
+            hostname: "{{ hostname_forti }}"
