@@ -1,0 +1,13 @@
+- hosts: fortivm6
+  connection: httpapi
+  collections:
+  - fortinet.fortios
+  vars:
+   vdom: "root"
+   ssl_verify: "False"
+  tasks:
+   - name: Configure global attributes.
+     fortios_system_global:
+        vdom:  "{{ vdom }}"
+        system_global:
+            hostname: "{{ hostname_forti }}"
